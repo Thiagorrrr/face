@@ -1,0 +1,26 @@
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    list-style: none;
+    padding: 20px;
+    font-size: 16px;
+    background: #cccccc;
+    border-bottom: 1px solid #fff;
+    transition: all ease-in-out 200ms;
+    cursor: pointer;
+    &:hover {
+        @media screen and (min-width: 1024px) {
+            transform: translate(10px, 0px);
+        } 
+    }
+    &:after {
+        display: inline-block;
+        content: "";
+        border: solid $color__black;
+        border-width: 0 2px 2px 0;
+        padding: 3px;
+        transform: rotate(-45deg);
+    }
+}

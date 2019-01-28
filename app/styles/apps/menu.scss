@@ -1,0 +1,79 @@
+.menu {
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        width: 30%;    
+    }
+    &.true{
+        height: 50px;
+        @media screen and (min-width: 1024px) {
+            height: auto;   
+        }
+    }
+    &__navigation {
+        height: 50px;
+        background: #cccccc;
+        border-bottom: 1px solid #fff;
+
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
+    
+    }
+    &__wrapper{
+        width: 30px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    &__burguer,
+    &__wrapper:before,
+    &__wrapper:after { 
+        position: relative;
+        display: inline-block;
+        top: 0;
+        bottom: 0;
+        margin: 2px 0;
+        width: 100%;
+        height: 4px;
+        background-color: $color__black;
+        border-radius: 4px;   
+    }
+    &__wrapper:before,
+    &__wrapper:after {
+        content: "";
+        transition: transform 0.3s ease-in-out, 
+        top 0.3s ease-in-out, 
+        bottom 0.3s ease-in-out;
+    }
+    &__wrapper:before{
+       top: 7px
+    }
+    &__wrapper:after {
+        top: -7px
+    }
+    &__wrapper.true:before{
+        transform: rotate(-45deg);
+        top: 15px;
+    }
+    &__wrapper.true:after{
+        transform: rotate(45deg);
+        top: -20px;
+    }
+    
+    &__burguer{
+        transition: opacity 0.3s ease-in-out;
+    }
+    &__burguer.true {
+        opacity: 0;
+    }
+    &__ul {
+        width: 100%;
+        transition: transform ease-in-out 300ms;
+      
+        &.true{
+            transform: translateX(-100%);
+            @media screen and (min-width: 1024px) {
+                transform: translateX(0%);
+            }
+        }
+    }
+}

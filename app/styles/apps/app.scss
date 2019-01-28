@@ -1,0 +1,17 @@
+@import "../apps/mixins.scss";
+@import "../apps/item.scss";
+@import "../apps/menu.scss";
+@import "../apps/repository.scss";
+@import "../apps/commits.scss";
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-width: rem(280);
+}
+.content {
+    @media screen and (min-width: 1024px) {
+        display: flex;
+    }
+}
